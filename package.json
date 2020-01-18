@@ -1,0 +1,9 @@
+{
+  "name": "wadong-backend-mocks",
+  "version": "1.0.0",
+  "description": "API mockings of wadong",
+  "main": "index.js",
+  "repository": "https://github.com/junhoyeo/wadong-backend-mocks",
+  "author": "JunhoYeo <32605822+JunhoYeo@users.noreply.github.com>",
+  "license": "MIT"
+}

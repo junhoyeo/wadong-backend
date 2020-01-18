@@ -5,9 +5,13 @@ import {
 } from './generate';
 
 (async () => {
-  console.log(
-    await generateBooks(),
-    await generateFoods(),
-    await generateMovies(),
-  );
+  const books = await generateBooks();
+  const foods = await generateFoods();
+  const movies = await generateMovies();
+
+  console.log(JSON.stringify({
+    books,
+    foods,
+    movies,
+  }));
 })();

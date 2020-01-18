@@ -1,10 +1,8 @@
 import exec from '../utils/exec';
 
-import {
-  getBooks,
-  getFoods,
-  getMovies,
-} from '../search';
+import { getBooks } from '../search/book';
+import { getFoods } from '../search/food';
+import { getMovies } from '../search/movie';
 
 export const generateMovies = async () => {
   const { stdout: result } = await exec('python3 generate/movie.py');

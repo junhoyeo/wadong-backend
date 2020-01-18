@@ -1,7 +1,7 @@
 import axios from 'axios';
 import cheerio from 'cheerio';
 
-const getFoods = async (query) => {
+export const getFoods = async (query) => {
   const getDataFromList = (datalist) => datalist.map(({ pname, addr, mcateNm, photo }) => ({
     name: pname,
     address: addr,
@@ -23,7 +23,3 @@ const getFoods = async (query) => {
     .concat(getDataFromList(places));
   return result;
 };
-
-(async (query) => {
-  console.log(await getFoods(query));
-})('원효로1동');

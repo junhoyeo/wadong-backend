@@ -5,5 +5,10 @@
   "main": "index.js",
   "repository": "https://github.com/junhoyeo/wadong-backend-mocks",
   "author": "JunhoYeo <32605822+JunhoYeo@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "cheerio": "^1.0.0-rc.3"
+  }
 }

@@ -1,7 +1,8 @@
 import axios from 'axios';
 import fastXmlParser from 'fast-xml-parser';
 
-const key = process.env.INTERPARK_KEY
+const key = process.env.INTERPARK_KEY;
+
 export const getBooks = async (query) => {
   const url = `http://book.interpark.com/api/search.api?key=${key}&query=${encodeURI(query)}`;
   const { data: html } = await axios.get(url);

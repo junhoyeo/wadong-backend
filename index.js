@@ -1,13 +1,7 @@
-import {
-  getBooks,
-  getFoods,
-  getMovies,
-} from './search';
+import { generateMovies } from './generate/index';
 
 (async () => {
   console.log(
-    await getBooks('노인과바다'),
-    await getFoods('원효로1동'),
-    await getMovies('백두산'),
+    await generateMovies(),
   );
 })();

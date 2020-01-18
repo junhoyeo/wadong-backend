@@ -1,7 +1,14 @@
 import axios from 'axios';
 import cheerio from 'cheerio';
 
-(async (query) => {
+const getFoods = async (query) => {
+  const getDataFromList = (datalist) => datalist.map(({ pname, addr, mcateNm, photo }) => ({
+    name: pname,
+    address: addr,
+    category: mcateNm,
+    photo: photo ? `https://img.siksinhot.com/place/${photo.imgNm}` : null,
+  }));
+
   const { data: html } = await axios.get(`https://www.siksinhot.com/search?keywords=${encodeURI(query)}`);
   const $ = cheerio.load(html);
   const dataString = $('script')[0].children[0].data
@@ -10,11 +17,13 @@ import cheerio from 'cheerio';
   const data = JSON.parse(dataString);
 
   const { searchResultHotplace: { list: hotplaces } } = data;
-  const result = hotplaces.map(({ pname, addr, hpSchCateNm, photo }) => ({
-    name: pname,
-    address: addr,
-    category: hpSchCateNm,
-    photo: `https://img.siksinhot.com/place/${photo.imgNm}`,
-  }));
+  const { searchResultGeneral: { list: places } } = data;
+
+  const result = getDataFromList(hotplaces)
+    .concat(getDataFromList(places));
   return result;
+};
+
+(async (query) => {
+  console.log(await getFoods(query));
 })('원효로1동');

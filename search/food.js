@@ -6,7 +6,7 @@ export const getFoods = async (query) => {
     name: pname,
     address: addr,
     category: mcateNm,
-    photo: photo ? `https://img.siksinhot.com/place/${photo.imgNm}` : null,
+    image: photo ? `https://img.siksinhot.com/place/${photo.imgNm}` : null,
   }));
 
   const { data: html } = await axios.get(`https://www.siksinhot.com/search?keywords=${encodeURI(query)}`);

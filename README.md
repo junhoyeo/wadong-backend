@@ -25,14 +25,14 @@
   "name": "계절밥상 용산아이파크몰점",
   "address": "서울특별시 용산구 한강로3가 40-999",
   "category": "한정식",
-  "photo": "https://img.siksinhot.com/place/1417245142117606.png"
+  "image": "https://img.siksinhot.com/place/1417245142117606.png"
 }
 ```
 
 - `name`: 맛집 상호
 - `address`: 주소
 - `category`: 분류
-- `photo`: 대표 이미지
+- `image`: 대표 이미지
 
 ### [영화](./data/movies.json)
 ```json

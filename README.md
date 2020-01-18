@@ -8,7 +8,8 @@
   "title": "트렌드 코리아 2020",
   "author": "김난도(Kim Ran Do),전미영,최지혜,이향은,이준영",
   "publisher": "미래의창",
-  "price": 18000
+  "price": 18000,
+  "image": "http://bimage.interpark.com/goods_image/0/8/2/2/318360822h.jpg"
 }
 ```
 

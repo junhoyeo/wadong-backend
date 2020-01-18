@@ -10,12 +10,13 @@ export const getBooks = async (query) => {
   const items = data.channel.item;
 
   const books = items.map((item) => {
-    const { title, priceStandard, author, publisher } = item;
+    const { title, priceStandard, author, publisher, coverSmallUrl } = item;
     return {
       title,
       author,
       publisher,
       price: priceStandard,
+      image: coverSmallUrl,
     }
   });
 

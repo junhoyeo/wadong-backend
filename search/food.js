@@ -17,9 +17,9 @@ export const getFoods = async (query) => {
   const data = JSON.parse(dataString);
 
   const { searchResultHotplace: { list: hotplaces } } = data;
-  const { searchResultGeneral: { list: places } } = data;
+  // const { searchResultGeneral: { list: places } } = data;
 
   const result = getDataFromList(hotplaces)
-    .concat(getDataFromList(places));
+    // .concat(getDataFromList(places));
   return result;
 };

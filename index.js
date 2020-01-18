@@ -6,7 +6,7 @@ import {
 
 (async () => {
   console.log(
-    await getBooks(),
+    await getBooks('노인과바다'),
     await getFoods('원효로1동'),
     await getMovies(),
   );

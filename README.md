@@ -13,6 +13,12 @@
 }
 ```
 
+- `title`: 책 제목
+- `author`: 작가
+- `publisher`: 출판사
+- `price`: 가격
+- `image`: 표지 이미지
+
 ### [음식](./data/foods.json)
 ```json
 {
@@ -22,6 +28,11 @@
   "photo": "https://img.siksinhot.com/place/1417245142117606.png"
 }
 ```
+
+- `name`: 맛집 상호
+- `address`: 주소
+- `category`: 분류
+- `photo`: 대표 이미지
 
 ### [영화](./data/movies.json)
 ```json
@@ -33,6 +44,11 @@
 }
 ```
 
+- `title`: 영화 제목
+- `image`: 포스터 이미지
+- `opened`: 개봉일
+- `score`: 만족도
+
 ### [음악](./data/music.json)
 ```json
 {
@@ -42,3 +58,8 @@
   "album": "Boyhood"
 },
 ```
+
+- `image`: 앨범 아트 이미지
+- `title`: 음악 제목
+- `author`: 아티스트 이름
+- `album`: 앨범 이름
